@@ -1,3 +1,4 @@
+//const fetch = require('node-fetch');
 let transactions = [];
 let myChart;
 
@@ -135,6 +136,7 @@ function sendTransaction(isAdding) {
     }
   })
   .catch(err => {
+    console.log(err); //18.4.5
     // fetch failed, so save in indexed db
     saveRecord(transaction);
 
